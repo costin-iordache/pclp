@@ -1,5 +1,35 @@
 ﻿nav{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+.principal {
+    width: 99%;
+    height: 8vh;
+    background: #808080;
+    display: flex;
+    allign-items: end;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    
+}
+.patrat{
+    background: #ff0000;
+    width: 100px;
+    padding: 25px 35px;
+    text-align: center;
+}
+nav .butoane {
+    border-radius: 400%;
+    width: 60px;
+    height: 30000px;
+    font-size: 50px;
+}
+.scroll {
+    overflow-y: scroll;
+}
+.muzica{
+
 }
