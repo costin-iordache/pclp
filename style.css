@@ -4,7 +4,7 @@
     margin-bottom: 20px;
 }
 .principal {
-    width: 105%;
+    width: 110%;
     height: 15vh;
     background: #808080;
     display: flex;
@@ -13,13 +13,11 @@
     justify-content: center;
     position: fixed;
     bottom: 0;
-    
 }
 .patrat{
     background: #ff0000;
     width: 100px;
     padding: 25px 35px;
-    
 }
 nav .butoane {
     border-radius: 400%;
@@ -32,14 +30,6 @@ nav .butoane {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    
-
-
-}
-
-
-.scroll {
-    overflow-y: scroll;
 }
 .muzica {
     margin: 70px -150px;
@@ -54,8 +44,8 @@ nav .butoane {
     margin: 130px -5px;
    
 }
-    #muzik::-webkit-slider-thumb {
-        -webkit-appearance: none;
+#muzik::-webkit-slider-thumb {
+    -webkit-appearance: none;
         width: 10px;
         height: 10px;
         background: #000000;
