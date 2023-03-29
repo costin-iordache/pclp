@@ -14,15 +14,15 @@
                  <div class="butoane">
                      <i class="fa-solid fa-chevron-left"></i>
                  </div>
-                 <div class="butoane">
-                     <i class="fa-sharp fa-solid fa-pause fa-fade"></i>
+                 <div class="butoane" onclick="playPause()">
+                    <i class="fa-sharp fa-solid fa-play fa-fade" id="start"></i>
                  </div>
                  <div class="butoane">
                      <i class="fa-solid fa-chevron-right"></i>
                  </div>
                     
                  <div class="muzica" >
-                     <audio controls>
+                     <audio controls id="mel">
                          <source src="file:///C:/Users/User/Desktop/PROIECT/rep/Muzica/Moonlight.mp3" type="audio/mp3">
                      </audio>
                  </div>
@@ -31,6 +31,31 @@
              </nav>
      </div>
      </div>
+
+<script>
+    let muzik = document.getElementById("muzik");
+    let mel = document.getElementById("mel");
+    let start = document.getElementById("start");
+
+    mel.onloadedmetadata = function () {
+        muzik.max = mel.duration;
+        muzik.value = mel.currentTime;
+    }
+
+    function playPause() {
+        if (start.classList.contains("fa-pause")) {
+            mel.pause();
+            start.classList.remove("fa-pause");
+            start.classList.add("fa-play");
+        }
+        else {
+            mel.play();
+            start.classList.add("fa-pause");
+            start.classList.remove("fa-play");
+        }
+    }
+
+</script>
 
 
  </body>
