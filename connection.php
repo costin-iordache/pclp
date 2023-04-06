@@ -1,8 +1,8 @@
 <?php      
     $host = "localhost";  
-    $user = "root";  
-    $password = '';  
-    $db_name = "javatpoint";  
+    $user = "test";  
+    $password = 'test';  
+    $db_name = "pclp";  
       
     $con = mysqli_connect($host, $user, $password, $db_name);  
     if(mysqli_connect_errno()) {  
