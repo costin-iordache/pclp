@@ -8,22 +8,23 @@
     height: 15vh;
     background: #808080;
     display: flex;
-    
+    right: 0px;
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
     bottom: 0;
+        
 }
-.patrat{
+.patrat {
     background: #ff0000;
     width: 100px;
     padding: 25px 35px;
-}
+}   
 nav .butoane {
     border-radius: 400%;
     width: 100px;
     height: 30px;
-    font-size: 60px;
+    font-size: 70px;
     position: center;
     margin: 5px;
     display: initial-flex;
@@ -36,13 +37,15 @@ nav .butoane {
 }
 #muzik {
     -webkit-appearance: none;
-    width: 150%;
-    height: 10px;
+    width: 450px;
+    height: 12px;
     background: #000000;
     border-radius: 8px;
     cursor: pointer;
     margin: 130px -5px;
-   
+    position: absolute;
+    right: 45%;
+    left: 45%;
 }
 #muzik::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -53,3 +56,29 @@ nav .butoane {
         border: 4px solid #ffffff;
         
     }
+
+.detalii {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+#volume-slider {
+    -webkit-appearance: none;
+    width: 450px;
+    
+    background: #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 100px -5px;
+    position: absolute;
+    right: 45%;
+    left: 45%;
+}
+
+
+
+
+#mute-icon {
+    margin: 0 2.5%;
+}
