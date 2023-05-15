@@ -3,94 +3,57 @@
  <head>
      <title> AudioPlayer Capabil</title>
      <link rel="stylesheet" href="style.css">
-     
      <script src="https://kit.fontawesome.com/79809dd0da.js" crossorigin="anonymous"></script>
+     
  </head>
+
  <body>
 
+    <h2 ><a class="logo" href="index.html">APlayer</a></h2>
+
+    <button id="login" class="button">Login</button>
+
+    <div class="citat">
+        <p class="text"></p>
+        <br><br><br><br><br><br><br><br><br>
+        <p class="autor"></p>
+        <form action="quote.php" method="get">
+            <button class="btnCitat" action="quote.php" >Random</button>
+        </form>
+    </div>
+    
      <div class="principal">
 
-         <class ="patrat">
-             <nav>
-                 <div class="butoane">
+         <div class = "patrat">
+             
+                 <div class="butoane" onclick="playBackward()">
                      <i class="fa-solid fa-chevron-left"></i>
                  </div>
                  <div class="butoane" onclick="playPause()">
-                     <i class="fa-sharp fa-solid fa-play fa-fade" id="start"></i>
+                     <i class="fa-sharp fa-solid fa-play" id="start"></i>
                  </div>
-                 <div class="butoane">
+                 <div class="butoane" onclick="playForward()">
                      <i class="fa-solid fa-chevron-right"></i>
                  </div>
 
-                 <div class="muzica">
-                     <audio id="mel">
-                         <source src="file:///C:/Users/User/Desktop/PROIECT/rep/Muzica/Moonlight.mp3" type="audio/mp3">
-                     </audio>
-                 </div>
-             </nav>
-         </class>
-         <output id="volume-output"></output>
-         <input type="range" id="volume-slider" max="100" value="100">
+                 <div class="muzica"></div>
+             
+            </div>
+        <output id="volume-output"></output>
+        
+        <input type="range" value="0" id="muzik" />
+
+        <div class="volum" onclick="volumeMute()">
+            <i class="fa-solid fa-volume-high" id="mute"></i>
+        </div>
+        
+        <input type="range" id="volume-slider" max="100" value="100"/>
+        
          
-         <input type="range" value="0" id="muzik" />
      </div>
-
-
-
-
-     <script>
-         let muzik = document.getElementById("muzik");
-         let mel = document.getElementById("mel");
-         let start = document.getElementById("start");
-         let volum = document.querySelector('volum');
-
-         const volumeSlider = document.getElementById('volume-slider');
-         const outputContainer = document.getElementById('volume-output');
-
-    
-
-         mel.onloadedmetadata = function () {
-             muzik.max = mel.duration;
-             muzik.value = mel.currentTime;
-             muzik.volume = mel.currentVolume;
-         }
-
-         function playPause() {
-             if (start.classList.contains("fa-pause")) {
-                 mel.pause();
-                 start.classList.remove("fa-pause");
-                 start.classList.add("fa-play");
-             }
-             else {
-                 mel.play();
-                 start.classList.add("fa-pause");
-                 start.classList.remove("fa-play");
-             }
-         }
-
-         if (mel.play()) {
-             setInterval(() => { muzik.value = mel.currentTime }, 500)
-         }
-         muzik.onchange = function () {
-             mel.play();
-             mel.currentTime = muzik.value;
-             start.classList.add("fa-pause");
-             start.classList.remove("fa-play");
-         }
-
-
-
-         volumeSlider.addEventListener('input', (e) => {
-             const value = e.target.value;
-
-             outputContainer.textContent = value;
-             mel.volume = value / 100;
-         });
-
-     </script>
-
-
+     
+     <script src="script.js"></script>
+     <!-- <script src="bundle.js"></script> -->
  </body>
-
 
 </html>
