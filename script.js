@@ -1,3 +1,4 @@
+
      let muzik = document.getElementById("muzik");
      let start = document.getElementById("start");
      let volum = document.querySelector('volum');
@@ -110,3 +111,4 @@
      document.getElementById("login").onclick = function () {
         location.href = "login.html";
     };
+
