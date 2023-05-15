@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang=" en">
+<html>
 <head>
     <meta charset="UTF-8"></meta>
     <title> Login page</title>
@@ -11,15 +11,18 @@
     
     <main id="main-holder">
         <h1 id="login-header">Login</h1>
-        <img src="resources/kisspng-computer-icons-user-profile-login-avatar-description-5ada41a3dd8609.2139625115242530919074.png" alt="avatar" class="avatar"> 
-        <form id="login-form">
-            <input type="text" name="username" id="user-field" class="login-form-field" placeholder="Username">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-            <input type="submit" value="Login" id="login-form=submit">
+        <img src="resources/icons-user.png" alt="avatar" class="avatar"> 
+
+        <form action="config.php" method="post" id="login-form">
+
+            <input type="text" name="user" id="user" class="login-form-field" placeholder="Username">
+
+            <input type="password" name="pass" id="pass" class="login-form-field" placeholder="Password">
+
+            <input type="submit" name="submit" value="Login" id="login-form=submit">
+
         </form>
-        <div id="login-error-msg-holder">
-            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-        </div>
+        
     </main>
 </body>
 </html>
